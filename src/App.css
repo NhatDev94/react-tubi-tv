@@ -1,0 +1,728 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.hero {
+  width: 100%;
+  height: 472px;
+  background-image: linear-gradient(rgba(38, 38, 45, 0), rgb(38, 38, 45)), url('https://canvas-bridge.tubitv.com/CvzVHiPIhX_qvTY3-hgKtTcegpU=/0x55:1739x700/1920x676/smart/img.adrise.tv/5de82011-a61b-4b63-ae8b-7b4c5b4986c2.jpg');
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero:hover {
+  cursor: pointer;
+}
+
+.hero-wrap {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
+}
+
+.hero-content {
+  position: absolute;
+  width: 100%;
+  bottom: 70px;
+  left: 0;
+}
+
+.hero .name-film {
+  padding-bottom: 85px;
+  padding-left: 70px;
+}
+
+.hero .name-film .play {
+  display: none;
+}
+
+.hero .name-film h1 {
+  font-size: 67px;
+  font-weight: 700;
+  line-height: 67px;
+  color: white;
+  max-width: 480px;
+  max-height: 130px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.hero .name-film h1:hover {
+  color: #ff501a;
+  cursor: pointer;
+}
+
+.slide-left {
+  width: 40%;
+  padding-bottom: 10px;
+}
+
+.slide-left .film-img,
+.slide-right .film-img {
+  width: 60px;
+  height: 80px;
+  margin: 0 5px;
+  margin-top: auto;
+}
+
+.slide-left .current-film {
+  width: 50%;
+  padding-top: 30px;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  margin-left: 5px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.slide-left .current-film .film-img {
+  margin: 0;
+}
+
+.slide-left .current-film .film-info {
+  flex-grow: 1;
+  justify-content: space-between;
+  padding-left: 15px;
+}
+
+.slide-left .current-film .film-info .left h6 {
+  color: white;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.slide-left .current-film .film-info .left p {
+  font-size: 10px;
+  color: white;
+  opacity: 0.5;
+}
+
+.slide-left .current-film .film-info a {
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  position: absolute;
+  display: block;
+  bottom: 15px;
+  right: 0;
+  background: #5f605f;
+  line-height: 1;
+  border-radius: 2px;
+}
+
+.slide-left .film-img img,
+.slide-right .film-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.watch-now {
+  width: 20%;
+  height: 65px;
+  margin-top: auto;
+  display: flex;
+}
+
+.watch-now .link-wrap {
+  width: 210px;
+  height: 55px;
+  margin: auto;
+  background: #ff501a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.watch-now .link-wrap:hover {
+  cursor: pointer;
+  width: 216px;
+  height: 60px;
+}
+
+.watch-now .link-wrap a span {
+  margin-left: 10px;
+  border-radius: 40px;
+  padding: 4px 7px 4px;
+  font-size: 11px;
+  font-weight: 700;
+  background: white;
+  color: #ff501a;
+}
+
+.slide-right {
+  width: 40%;
+  margin-top: auto;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+/* --------------------------------------- */
+.header {
+  width: 100%;
+  height: 80px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 50px;
+}
+
+.header .logo {
+  width: 30%;
+  align-items: center;
+}
+
+.header .logo a {
+  display: block;
+  margin-left: 50px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.header .logo svg {
+  width: 80px;
+  height: 22px;
+  color: white;
+}
+
+.header .search {
+  width: 40%;
+  padding: 0 50px;
+  position: relative;
+}
+
+.header .search input {
+  display: block;
+  width: 100%;
+  height: 38px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  text-align: center;
+  margin: auto 0;
+}
+
+.header .search input::placeholder {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+
+.header .search i {
+  position: absolute;
+  top: 50%;
+  left: 65px;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.header .login {
+  width: 30%;
+  justify-content: flex-end;
+  margin: auto 0;
+}
+
+.header .login .register-wrap {
+  width: 145px;
+}
+
+.header .login a {
+  display: block;
+  width: 136px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.header .login .register {
+  background: white;
+  border-radius: 3px;
+  color: #26262d;
+  margin: auto;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.header .login .register:hover {
+  width: 145px;
+  height: 44px;
+}
+/* ---------------------------------- */
+.topic {
+  width: 100%;
+  padding:  0 65px;
+  background: #26262d;
+}
+
+.topic .topic-wrap {
+  width: 100%;
+  height: 100%;
+  padding-top: 25px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.topic .title {
+  justify-content: space-between;
+  padding: 0 5px;
+  padding-bottom: 20px;
+  color: white;
+}
+
+.topic .title h2 {
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.topic .title i {
+  font-size: 24px;
+  transition: all 0.2s;
+}
+
+.topic .title h2:hover,
+.topic .title i:hover {
+  color: #ff501a;
+  cursor: pointer;
+}
+
+.topic .list-film {
+  width: 100%;
+  height: 435px;
+  position: relative;
+}
+
+.topic .list-wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.topic .list-film .item {
+  min-width: 20%;
+  height: 100%;
+  padding: 0 5px;
+  color: white;
+}
+
+.topic .list-film .item img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.topic .list-film .item h3 {
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 10px;
+  transition: all 0.2s;
+  padding-bottom: 20px;
+}
+
+.topic .list-film .item h3:hover {
+  color: #ff501a;
+}
+
+.topic .list-film .item .info {
+  justify-content: space-between;
+  height: 40px;
+}
+
+.topic .list-film .item .info-left p {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+.topic .list-film .item .info span {
+  padding: 3px 10px;
+  font-size: 11px;
+  background: #515157;
+  border-radius: 2px;
+  margin-right: 5px;
+  margin-bottom: auto;
+}
+
+.topic .list-film button {
+  position: absolute;
+  top: 180px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 2;
+}
+
+.topic .list-film .pre {
+  left: 0;
+  transform: translate(0%, -50%);
+  display: none;
+}
+
+.topic .list-film .next {
+  right: 0;
+  transform: translate(0%, -50%);
+}
+
+.topic .list-film:hover button {
+  opacity: 1;
+}
+
+.topic .list-film button i {
+  font-size: 11px;
+}
+/* ---------------------------------------- */
+.load-more {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 55px;
+  background: #26262d;
+}
+
+.load-more .btn-wrap {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.load-more button {
+  width: 210px;
+  height: 55px;
+  background: white;
+  font-weight: 600;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.load-more button:hover {
+  width: 220px;
+  height: 60px;
+}
+/* ----------------------------------------- */
+.about {
+  width: 100%;
+  padding: 0 60px;
+  background: #202026;
+}
+
+.about .tubi {
+  width: 100%;
+  justify-content: space-between;
+  color: #d7d7d7;
+  padding-top: 45px;
+}
+
+.about .tubi .logo {
+  width: 20%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+}
+
+.about .tubi .logo svg {
+  width: 60px;
+}
+
+.about .tubi .social {
+  width: 20%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+}
+
+.about .tubi .social i {
+  font-size: 24px;
+  font-weight: 400;
+  margin-right: 15px;
+}
+
+.about .sub-nav {
+  width: 100%;
+  flex-wrap: wrap;
+  padding-top: 45px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about .sub-nav li {
+  width: 20%;
+  margin-bottom: 40px;
+}
+
+.about .sub-nav li h6 {
+  color: #707c86;
+  font-weight: 700;
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+
+.about .sub-nav li p {
+  color: white;
+  font-size: 11px;
+  padding-bottom: 5px;
+}
+
+.footer {
+  width: 100%;
+  padding: 0 60px;
+  background: #202026;
+  text-align: center;
+}
+
+.footer .app {
+  width: 100%;
+  padding-top: 45px;
+  padding: 35px;
+}
+
+.footer .app img {
+  width: 120px;
+  height: 40px;
+  margin: 0 15px;
+}
+
+.footer p {
+  font-size: 11px;
+  color: #707c86;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+
+.footer span {
+  display: block;
+  font-size: 9px;
+  opacity: 0.2;
+  font-weight: 400;
+  color: white;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+/* ============Tablet============== */
+/* ========================== */
+/* ========================== */
+@media screen and (max-width: 1169px) {
+  .topic {
+      padding:  0 65px;
+  }
+
+  .topic .topic-wrap {
+      padding: 25px 0;
+  }
+
+  .topic .title {
+      padding-bottom: 15px;
+  }
+
+  .topic .list-film {
+      height: 455px;
+  }
+
+  .topic .list-film .item {
+      min-width: 25%;
+  }
+
+  .about .tubi .logo {
+      width: 25%;
+  }
+
+  .about .tubi .social {
+      width: 25%;
+  }
+
+  .about .sub-nav li {
+      width: 25%;
+  }
+}
+
+/* =============Tablet Small============= */
+/* ========================== */
+/* ========================== */
+@media screen and (max-width: 959px) {
+  .hero .watch-now {
+      display: none;
+  }
+
+  .hero-content {
+      bottom: 40px;
+      bottom: 50px;
+  }
+
+  .hero .name-film {
+      padding-bottom: 60px;
+      padding-left: 60px;
+      align-items: center;
+  }
+
+  .hero .name-film .play {
+      display: flex;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #ff501a;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      margin-right: 25px;
+  }
+
+  .hero .name-film .play:hover {
+      cursor: pointer;
+  }
+
+  .hero .name-film .play i {
+      font-size: 9px;
+      align-items: center;    
+  }
+
+  .hero .name-film h1 {
+      font-size: 43px;
+      font-weight: 700;
+      line-height: 48px;
+      max-width: 360px;
+      max-height: 90px;
+  }
+
+  .slide-left {
+      width: 50%;
+  }
+
+  .slide-right {
+      width: 50%;
+  }
+
+
+  .header .logo {
+      width: 50%;
+  }
+
+  .header .logo a {
+      font-size: 13px;
+  }
+
+  .header .search {
+      display: none;
+  }
+
+  .header .login {
+      width: 50%;
+  }
+
+  .topic .list-film {
+      height: 480px;
+  }
+
+  .topic .list-film .item {
+      min-width: 33.33333%;
+  }
+
+  .about .tubi .logo {
+      width: 33.33333%;
+  }
+
+  .about .tubi .social {
+      width: 33.33333%;
+  }
+
+  .about .sub-nav li {
+      width: 33.33333%;
+  }
+}
+
+/* ===========Mobile=============== */
+/* ========================== */
+/* ========================== */
+@media screen and (max-width: 767px) {
+  .hero-content {
+      bottom: 0px;
+  }
+
+  .hero .name-film {
+      padding-bottom: 25px;
+      padding-left: 20px;
+  }
+
+  .hero .name-film .play {
+      width: 22px;
+      height: 22px;
+      margin-right: 15px;
+  }
+
+  .hero.name-film h1 {
+      font-size: 27px;
+      line-height: 32px;
+      max-width: 400px;
+  }
+  
+  .slide-left {
+      display: none;
+  }
+
+  .slide-right {
+      display: none;
+  }
+
+  .topic {
+      padding:  0 20px;
+  }
+
+  .topic .list-film {
+      height: 394px;
+  }
+
+  .topic .list-film .item {
+      padding: 0 3px;
+  }
+
+  .topic .list-film .item h3 {
+      font-size: 16px;
+      font-weight: 400;
+  }
+  
+  .topic .list-film .item .info {
+      display: none;
+  }
+
+  .about {
+      padding: 0 15px;
+  }
+}
