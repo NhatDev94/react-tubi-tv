@@ -54,7 +54,7 @@
 
 .hero .film-img {
     opacity: 0.5;
-    transition: opacity 0.2s;
+    transition: all 0.5s;
 }
 
 .hero .active {
@@ -67,7 +67,7 @@
 }
 
 .slide-right .film-img {
-    width: 60px;
+    min-width: 60px;
     height: 80px;
     margin: 0 5px;
     margin-top: auto;
@@ -182,10 +182,11 @@
     padding-bottom: 10px;
 }
 
-.hero .hide-left,
-.hero .hide-right {
-    margin-right: -65px;
+.slide-right .right-content {
+    max-width: 140px;
+    overflow: hidden;
 }
+
 
 /* =========================== */
 
@@ -232,6 +233,7 @@
     }
     .slide-right {
         width: 50%;
+        justify-content: flex-end;
     }
 }
 
