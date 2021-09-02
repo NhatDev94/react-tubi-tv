@@ -107,7 +107,7 @@ class App extends React.Component {
                         />
                         <Route
                             exact
-                            path="/"
+                            path="/react-tubi-tv"
                             component={({ history }) =>
                                 <Home
                                     history={history}
