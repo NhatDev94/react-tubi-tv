@@ -10,7 +10,7 @@ class Footer extends React.Component {
                 < section className="about" >
                     <div className="tubi flex">
                         <div className="logo">
-                            <Link to="/react-tubi-tv">
+                            <Link to="/react-tubi-tv/">
                                 <svg alt="Stream Full Length Series &amp; Movies" className="_2rWrR _3GE7h _2DIK5"
                                     preserveAspectRatio="xMidYMid meet" viewBox="0 0 105 44">
                                     <path

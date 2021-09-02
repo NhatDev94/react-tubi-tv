@@ -27,8 +27,8 @@ class Movies extends React.Component {
                             <div className="left-content">
                                 <Link to="/react-tubi-tv" className="add-to-list">Add to My List</Link>
                                 <div className="share flex">
-                                    <Link to="/react-tubi-tv">Share</Link>
-                                    <Link to="/react-tubi-tv"><i className="fas fa-ellipsis-h"></i></Link>
+                                    <Link to="/react-tubi-tv/">Share</Link>
+                                    <Link to="/react-tubi-tv/"><i className="fas fa-ellipsis-h"></i></Link>
                                 </div>
                             </div>
                         </div>
@@ -50,22 +50,22 @@ class Movies extends React.Component {
                             </div>
                             <div className="dirc">
                                 <p className="dirc" >After years in special ops and wrongful imprisonment, a     witness to the murder of a Chinese cop agrees to retrieve a kidnapped girl and a bag of money.</p>
-                                <p>DIRECTOR<Link to="/react-tubi-tv">Kenio Waxman</Link></p>
-                                <p>STARRING<Link to="/react-tubi-tv">Steven Seagal, Marlaina, MahVitaly Kravchenko</Link></p>
+                                <p>DIRECTOR<Link to="/react-tubi-tv/">Kenio Waxman</Link></p>
+                                <p>STARRING<Link to="/react-tubi-tv/">Steven Seagal, Marlaina, MahVitaly Kravchenko</Link></p>
                             </div>
                         </div>
 
                     </div>
                     {/* Mobile */}
                     <div className="share-small hide">
-                        <Link to="/react-tubi-tv" className="add-to-list">Add to My List</Link>
-                        <Link to="/react-tubi-tv">Share</Link>
-                        <Link to="/react-tubi-tv"><i className="fas fa-ellipsis-h"></i></Link>
+                        <Link to="/react-tubi-tv/" className="add-to-list">Add to My List</Link>
+                        <Link to="/react-tubi-tv/">Share</Link>
+                        <Link to="/react-tubi-tv/"><i className="fas fa-ellipsis-h"></i></Link>
                     </div>
                     <div className="dirc-small hide">
                         <p className="dirc" >After years in special ops and wrongful imprisonment, a     witness to the murder of a Chinese cop agrees to retrieve a kidnapped girl and a bag of money.</p>
-                        <span>DIRECTOR<Link to="/react-tubi-tv">Kenio Waxman</Link></span>
-                        <span>STARRING<Link to="/react-tubi-tv">Steven Seagal, Marlaina, MahVitaly Kravchenko</Link></span>
+                        <span>DIRECTOR<Link to="/react-tubi-tv/">Kenio Waxman</Link></span>
+                        <span>STARRING<Link to="/react-tubi-tv/">Steven Seagal, Marlaina, MahVitaly Kravchenko</Link></span>
                     </div>
                 </div>
             </div>

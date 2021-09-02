@@ -12,7 +12,7 @@ class Film extends React.Component {
                 <div className="img">
                     <Link to={`/movies/${film.id}`} className="img-wrap"><img src={film.url} alt="" /></Link>
                     <Link to={`/movies/${film.id}`} className="play"><i className="fas fa-play"></i></Link>
-                    <Link to="/react-tubi-tv" className="add-to-list">Add to My List</Link>
+                    <Link to="/react-tubi-tv/" className="add-to-list">Add to My List</Link>
                 </div>
                 <Link to={`/movies/${film.id}`}>
                     <h3 className="name">{film.name} </h3>

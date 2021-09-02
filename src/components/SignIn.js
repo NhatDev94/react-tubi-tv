@@ -76,7 +76,7 @@ class SignIn extends React.Component {
 
     loginSuccess = () => {
         this.props.changeIsLogged(this.curr)
-        this.props.history.push('/react-tubi-tv')
+        this.props.history.push('/react-tubi-tv/')
     }
 
     render() {
