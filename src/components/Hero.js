@@ -68,6 +68,7 @@ class Hero extends React.Component {
         row.appendChild(hideLeft)
         slideRight.appendChild(hideRight)
 
+
         let id = setInterval(() => {
             marginLeft -= 5
             marginRight += 5
@@ -84,7 +85,7 @@ class Hero extends React.Component {
                 film2.classList.remove('active')
                 hideLeft.classList.add('active')
             }
-            window.location.pathname !== '/' && clearInterval(id)
+            window.location.pathname !== '/react-tubi-tv' && clearInterval(id)
         }, 20)
         this.setState({ filmIndex: filmIndex >= length - 1 ? 0 : filmIndex + 1 }, () => null)
     }
@@ -148,6 +149,7 @@ class Hero extends React.Component {
     }
     componentDidMount() {
         let id = setInterval(() => {
+            console.log("ok");
             this.slideAuto()
             window.location.pathname !== '/react-tubi-tv' && clearInterval(id)
         }, 3000)
