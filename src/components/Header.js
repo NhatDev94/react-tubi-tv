@@ -55,7 +55,7 @@ class Header extends React.Component {
             target.value.length > 0 && this.routingFunction('/search')
         }
         if (window.location.pathname === '/search') {
-            target.value.length === 0 && this.routingFunction('/')
+            target.value.length === 0 && this.routingFunction('/react-tubi-tv')
             // return
         }
         this.props.getSearchValue(target.value)
@@ -102,7 +102,7 @@ class Header extends React.Component {
         return (
             <header className="header flex" >
                 <div className="logo flex" >
-                    <Link to="/">
+                    <Link to="/react-tubi-tv">
                         <svg alt="Stream Full Length Series &amp; Movies"
                             className="_2rWrR _3GE7h _2DIK5"
                             preserveAspectRatio="xMidYMid meet"
@@ -113,7 +113,7 @@ class Header extends React.Component {
                     <Link 
                         className="hide-small" 
                         style={{ display: `${isStayFormLogin ? "none" : "block"}` }} 
-                        to="/" 
+                        to="/react-tubi-tv" 
                         onClick={this.showMenu}
                     >Browse</Link>
                     <i
@@ -194,17 +194,17 @@ class Header extends React.Component {
                         </div>
                         <div className="genres">
                             <h2>GENRES</h2>
-                            <Link to="">Action</Link>
-                            <Link to="">Anime</Link>
-                            <Link to="">Classics</Link>
-                            <Link to="">Comendi</Link>
-                            <Link to="">Crime TV</Link>
-                            <Link to="">Horror</Link>
-                            <Link to="">Docuseries</Link>
-                            <Link to="">Drama</Link>
-                            <Link to="">Kids Show</Link>
-                            <Link to="">LifeStyle</Link>
-                            <Link to="">Thriller</Link>
+                            <Link to="/react-tubi-tv">Action</Link>
+                            <Link to="/react-tubi-tv">Anime</Link>
+                            <Link to="/react-tubi-tv">Classics</Link>
+                            <Link to="/react-tubi-tv">Comendi</Link>
+                            <Link to="/react-tubi-tv">Crime TV</Link>
+                            <Link to="/react-tubi-tv">Horror</Link>
+                            <Link to="/react-tubi-tv">Docuseries</Link>
+                            <Link to="/react-tubi-tv">Drama</Link>
+                            <Link to="/react-tubi-tv">Kids Show</Link>
+                            <Link to="/react-tubi-tv">LifeStyle</Link>
+                            <Link to="/react-tubi-tv">Thriller</Link>
 
                         </div>
                     </div>

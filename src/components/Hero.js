@@ -119,7 +119,7 @@ class Hero extends React.Component {
                                             <h6>{hotFilm[filmIndex].type}</h6>
                                             <p>{hotFilm[filmIndex].time}</p>
                                         </div>
-                                        <Link to="/">TV-PG</Link>
+                                        <Link to="/react-tubi-tv">TV-PG</Link>
                                     </div>
                                 </div>
 
@@ -149,7 +149,7 @@ class Hero extends React.Component {
     componentDidMount() {
         let id = setInterval(() => {
             this.slideAuto()
-            window.location.pathname !== '/' && clearInterval(id)
+            window.location.pathname !== '/react-tubi-tv' && clearInterval(id)
         }, 3000)
     }
 
