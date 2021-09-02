@@ -23,6 +23,7 @@ class FormLogin extends React.Component {
     }
 
     render() {
+        window.scrollTo({top:0})
         return (
             <div className="sign-in-page">
                 <div className="sign-page-wrap">
@@ -53,6 +54,9 @@ class FormLogin extends React.Component {
 
             </div>
         )
+    }
+    componentWillUnmount() {
+        window.scrollTo({top: 0})
     }
 }
 

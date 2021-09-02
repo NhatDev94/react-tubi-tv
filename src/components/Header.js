@@ -21,6 +21,7 @@ class Header extends React.Component {
         window.addEventListener('scroll', () => {
             let path = this.props.location.pathname
             if (path.indexOf('form-login') > -1) {
+                header.style.background = 'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0))'
                 return
             }
             let nowY = window.scrollY
@@ -32,7 +33,7 @@ class Header extends React.Component {
             header.style.top = 0
             beforeY = nowY
 
-            if (nowY !== 0) {
+            if (window.pageYOffset !== 0) {
                 header.style.background = 'rgba(0, 0, 0, 0.6)'
                 return
             }
@@ -140,12 +141,12 @@ class Header extends React.Component {
                                     <i className="fas fa-sort-down sign-in"></i>
                                     <div className="brige"></div>
                                     <div className="account">
-                                        <Link to="">Account Setting</Link>
-                                        <Link to="">Parental Controls</Link>
-                                        <Link to="">Help Center</Link>
-                                        <Link to="">Activate Your Device</Link>
+                                        <Link to="/react-tubi-tv/">Account Setting</Link>
+                                        <Link to="/react-tubi-tv/">Parental Controls</Link>
+                                        <Link to="/react-tubi-tv/">Help Center</Link>
+                                        <Link to="/react-tubi-tv/">Activate Your Device</Link>
                                         <Link
-                                            to=""
+                                            to="/react-tubi-tv/"
                                             className="sign-out"
                                             onClick={() => props.changeIsLogged(null)}
                                         >Sign Out</Link>

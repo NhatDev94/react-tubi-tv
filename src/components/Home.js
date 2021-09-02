@@ -15,9 +15,9 @@ class Home extends React.Component {
     // componentDidMount() {
     //     this.isMount === true && this.props.changeIsStayFormLogin(false)
     // }
-
-    // componentWillUnmount() {
-    // }
+    componentWillUnmount() {
+        window.scrollTo({top: 0})
+    }
 }
 
 export default Home

@@ -27,8 +27,9 @@ class SearchResults extends React.Component {
             </div>
         )
     }
-
-    
+    componentWillUnmount() {
+        window.scrollTo({top: 0})
+    }
 }
 
 export default SearchResults
