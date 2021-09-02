@@ -1,0 +1,286 @@
+.topic {
+    width: 100%;
+    padding: 0 65px;
+    background: #26262d;
+}
+
+.topic .topic-wrap {
+    width: 100%;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.topic .title {
+    justify-content: space-between;
+    padding: 0 5px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.topic .title h2 {
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.topic .title i {
+    font-size: 24px;
+    transition: all 0.2s;
+}
+
+.topic .title h2:hover,
+.topic .title i:hover {
+    color: #ff501a;
+    cursor: pointer;
+}
+
+.topic .list-film {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.topic .list-wrap {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.topic .list-film .item {
+    min-width: 20%;
+    height: 100%;
+    padding: 0 5px;
+    color: white;
+}
+
+.item .img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.item .img:hover .img-wrap {
+    opacity: 0.6;
+}
+
+.item .img:hover .play {
+    opacity: 1;
+}
+
+.item .img:hover .add-to-list {
+    bottom: 6px;
+    opacity: 1;
+}
+
+.item .play {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.item .play i {
+    font-size: 14px;
+    margin: auto;
+}
+
+.item .play:hover {
+    border-color: #ff501a;
+    color: #ff501a;
+}
+
+.item .add-to-list {
+    display: block;
+    font-size: 12px;
+    width: 98%;
+    padding: 12px 0;
+    text-align: center;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: -10px;
+    left: 1%;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.item .add-to-list:hover {
+    color: #ff501a;
+}
+
+.topic .list-film .item img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.topic .list-film .item h3 {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 10px;
+    transition: all 0.2s;
+    padding-bottom: 20px;
+}
+
+.topic .list-film .item h3:hover {
+    color: #ff501a;
+}
+
+.topic .list-film .item .info {
+    justify-content: space-between;
+    height: 40px;
+}
+
+.topic .list-film .item .info-left p {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.topic .list-film .item .info span {
+    padding: 3px 10px;
+    font-size: 11px;
+    background: #515157;
+    border-radius: 2px;
+    margin-right: 5px;
+    margin-bottom: auto;
+}
+
+.topic .list-film .control {
+    width: 100%;
+    padding-bottom: 13.8034%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.topic .list-film button {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 2;
+}
+
+.topic .list-film .pre {
+    left: 0;
+    display: none;
+}
+
+.topic .list-film .next {
+    right: 0;
+}
+
+.topic .list-film:hover button {
+    opacity: 1;
+}
+
+.topic .list-film button i {
+    font-size: 11px;
+}
+
+/* =================================== */
+
+@media screen and (max-width: 1169px) {
+    .topic {
+        padding: 0 60px;
+    }
+    .topic .topic-wrap {
+        padding: 25px 0;
+    }
+    .topic .title {
+        padding-bottom: 15px;
+    }
+    .topic .list-film {
+        height: auto;
+    }
+
+    .topic .list-film .control {
+        padding-bottom: 17.4219%;
+
+    }
+
+    .topic .list-film .item {
+        min-width: 25%;
+    }
+}
+
+/* ================================== */
+
+@media screen and (max-width: 959px) {
+    .topic .list-film {
+        height: auto;
+    }
+    .topic .list-film .item {
+        min-width: 33.33333%;
+    }
+
+    .topic .list-film .control {
+        padding-bottom: 23.028%;
+    }
+}
+
+/* =================================== */
+
+@media screen and (max-width: 767px) {
+    .topic {
+        padding: 0 20px;
+    }
+    .topic .list-film {
+        height: auto;
+    }
+    .topic .list-film .item {
+        padding: 0 3px;
+    }
+    .topic .list-film .item h3 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .topic .list-film .item .info {
+        display: none;
+    }
+
+    .item .play {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .item .play i {
+        font-size: 12px;
+    }
+    
+    .item .add-to-list {
+        font-size: 10px;
+        padding: 10px 0;
+    }
+    
+}
+
+@media screen and (max-width: 419px) {
+    .item .add-to-list {
+        padding: 8px 0;
+    }
+}

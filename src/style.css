@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.flex {
+    display: flex;
+}
+
+.nav {
+    padding: 20px 200px;
+    background: darkkhaki;
+}
+
+.nav ul {
+    justify-content: space-between;
+}
+
+input {
+    border: 1px solid silver;
+    padding: 5px 20px;
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+button {
+    background: darkolivegreen;
+    color: white;
+    padding: 7px 20px;
+}
+
+button:hover {
+    background: teal;
+}
+
+a {
+    display: block;
+    color: black;
+    padding: 20px;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: blueviolet;
+}
+
+.home,
+.sign,
+.search {
+    width: 100%;
+    background: slategrey;
+    color: white;
+    padding: 20px 50px;
+    margin-top: 80px;
+}
+
+.home h1,
+.sign h1,
+.search h1 {
+    font-size: 42px;
+    padding-bottom: 40px;
+}
+
+.home .content {
+    width: 40%;
+    padding: 30px 10px;
+    margin-bottom: 30px;
+    background: silver;
+}
+
+.home .content h4 {
+    font-style: 22px;
+    font-weight: 600;
+    color: darkgoldenrod;
+}
+
+.sign p {
+    color: black;
+}
+
+.sign button {
+    padding: 7px 20px;
+    background: blueviolet;
+    color: white;
+}
+
+.sign button:hover {
+    background: violet;
+}
+
+.header {
+    width: 100%;
+    padding: 20px 40px;
+    background: black;
+    color: white;
+    display: block;
+}
+
+.header ul {
+    justify-content: space-between;
+}
+
+.header a {
+    color: white;
+    font-size: 19px;
+    font-weight: 600;
+}

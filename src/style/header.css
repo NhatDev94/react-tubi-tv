@@ -1,0 +1,530 @@
+.header {
+    width: 100%;
+    height: 80px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 50px;
+    z-index: 1;
+    justify-content: space-between;
+    transition: all 0.4s;
+    transition-delay: 0.3s;
+    z-index: 4;
+}
+
+.header .logo {
+    width: 30%;
+    align-items: center;
+}
+
+.header .logo .menu {
+    display: none;
+}
+
+.header .logo a {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 60px;
+}
+
+.header .logo svg {
+    width: 80px;
+    height: 22px;
+    color: white;
+}
+
+.menu-content {
+    position: fixed;
+    top: 0;
+    left: -60%;
+    width: 25%;
+    height: 100vh;
+}
+
+.menu-content .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: white;
+    padding: 0 30px;
+    padding-top: 40px;
+    overflow: scroll;
+}
+
+.menu-content .content::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-content .content {
+    scrollbar-width: none;
+}
+
+.menu-content .search-mobile {
+    width: 100%;
+    display: flex;
+    position: relative;
+    display: none;
+}
+
+.menu-content .search-mobile input {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 7px 10px;
+    padding-left: 40px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.menu-content .search-mobile i {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    padding: 8px;
+}
+
+.menu-content .genres {
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
+}
+
+.menu-content .genres h2 {
+    padding-bottom: 10px;
+}
+
+.menu-content .genres a {
+    display: block;
+    color: black;
+    padding: 4px 0;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.menu-content .genres a:hover {
+    color: #ff501a;
+}
+
+.menu-content .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.header .search {
+    width: 40%;
+    padding: 0 20px;
+    position: relative;
+}
+
+.header .search input {
+    display: block;
+    width: 100%;
+    height: 38px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    text-align: center;
+    margin: auto 0;
+}
+
+.header .search input::placeholder {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+.header .search i {
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.header .search i:hover {
+    cursor: pointer;
+}
+
+.header .login {
+    width: 30%;
+    justify-content: flex-end;
+    align-items: center;
+    margin: auto 0;
+    padding-right: 5px;
+}
+
+.header .login .register-wrap {
+    height: 50px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .login > a {
+    display: inline-block;
+    height: 40px;
+    padding: 0 40px;
+    line-height: 40px;
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+.header .login .register-wrap > a {
+    display: inline-block;
+    height: 40px;
+    padding: 0 40px;
+    line-height: 40px;
+    background: white;
+    transition: all 0.2s;
+    font-weight: 600;
+    color: black;
+    border-radius: 3px;
+}
+
+.header .login .register-wrap > a:hover {
+    height: 44px;
+    padding: 0 44px;
+    line-height: 44px;
+}
+
+
+.header .login .sign-wrap {
+    margin-left: 5px;
+}
+
+.header .login .sign-wrap > a {
+    padding-right: 10px;
+    padding-left: 30px;
+    font-weight: 600;
+}
+
+.header .login .welcome {
+    color: white;
+    position: relative;
+}
+
+.header .login .welcome:hover {
+    cursor: pointer;
+}
+
+.header .login .welcome h1 {
+    white-space: nowrap;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header .login .welcome i {
+    padding-left: 5px;
+    z-index: 2;
+}
+
+
+.header .login .welcome .brige {
+    width: 240px;
+    height: 20px;
+    position: absolute;
+    top: 100%;
+    right: -10%;
+}
+
+.header .login .welcome:hover .account {
+    display: block;
+    opacity: 1;
+}
+
+.header .login .welcome .account {
+    position: absolute;
+    width: 240px;
+    top: 180%;
+    right: -10%;
+    padding: 5px 20px;
+    background: white;
+    border-radius: 3px;
+    display: none;
+    opacity: 0;
+    animation: hide 0.5s
+}
+
+@keyframes hide {
+    from {
+        display: none;
+        opacity: 0;
+    }
+    to {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.header .login .welcome .account a {
+    display: block;
+    color: black;
+    opacity: 0.7;
+    padding: 5px 0;
+}
+
+.header .login .welcome .account a:hover {
+    opacity: 1;
+}
+
+.header .login .welcome .account .sign-out {
+    padding-bottom: 10px;
+    margin-top: 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.header .form-change {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    margin: auto 0;
+}
+
+.header .form-change a {
+    display: block;
+    width: 136px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.menu-content {
+    display: none;
+}
+
+/* =============================== */
+
+@media screen and (max-width: 959px) {
+    .header .logo {
+        width: 30%;
+    }
+    .header .logo a {
+        font-size: 13px;
+    }
+    .header .search {
+        display: none;
+    }
+
+    .menu-content {
+        width: 40%;
+    }
+
+    .menu-content .search-mobile {
+        display: block;
+    }
+
+    .header .search i {
+        left: 25px;
+    }
+
+    .header .search input::placeholder {
+        font-size: 11px;
+    }
+
+    .header .login {
+        width: 40%;
+    }
+
+    .header .login .register-wrap > a {
+        padding: 0 25px;
+    }
+
+    .header .login .sign-wrap > a {
+        padding-left: 0;
+    }
+
+    /* .header .login a {
+        width: 120px;
+    } */
+}
+
+/* ====================================== */
+@media screen and (max-width: 767px) {
+    .header {
+        padding: 0 5px;
+        height: 60px;
+    }
+
+    .header .login {
+        margin-right: 0px;
+    }
+
+    .header .logo a {
+        margin-right: 20px;
+    }
+}
+
+/* ======================================= */
+
+@media screen and (max-width: 639px) {
+    .hide-small {
+        display: none !important;
+    }
+
+    .header .logo {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .header .logo .menu {
+        display: block;
+        color: white;
+        padding-right: 8px;
+        font-size: 18px;
+    }
+
+    .header .logo .menu:hover {
+        cursor: pointer;
+    }
+
+    .header .logo {
+        width: 30%;
+    }
+
+    .header .logo a {
+        margin-right: 0;
+    }
+
+    .header .login {
+        width: 70%;
+    }
+
+    .header .login .register-wrap {
+        width: 100px;
+    }
+
+    .header .login .register-wrap > a {
+        height: 32px;
+        line-height: 32px;
+        padding: 0 12px;
+    }
+
+    .header .login .register-wrap > a:hover {
+        height: 34px;
+        padding: 0 16px;
+        line-height: 34px;
+    }
+
+    .header .login .sign-wrap {
+        margin-left: 0;
+    }
+
+    .header .login .sign-wrap > a {
+        padding-left: 8px;
+    }
+
+    .header .login .welcome {
+        margin-right: 50px;
+    }
+
+    .header .login .welcome h1 {
+        font-size: 14px;
+    }
+
+    .menu-content {
+        position: fixed;
+        top: 0;
+        left: -60%;
+        width: 50%;
+        height: 100vh;
+    }
+    
+    .menu-content .content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: white;
+        padding: 0 30px;
+        padding-top: 40px;
+        overflow: scroll;
+    }
+    
+    .menu-content .content::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .menu-content .content {
+        scrollbar-width: none;
+    }
+    
+    .menu-content .search-mobile {
+        width: 100%;
+        display: flex;
+        position: relative;
+    }
+    
+    .menu-content .search-mobile input {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 7px 10px;
+        padding-left: 40px;
+        border-radius: 50px;
+        font-size: 14px;
+    }
+    
+    .menu-content .search-mobile i {
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        padding: 8px;
+    }
+    
+    .menu-content .genres {
+        margin-top: 20px;
+    }
+    
+    .menu-content .genres h2 {
+        padding-bottom: 10px;
+    }
+    
+    .menu-content .genres a {
+        display: block;
+        color: black;
+        padding: 4px 0;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+    .menu-content .genres a:hover {
+        color: #ff501a;
+    }
+
+    .menu-content .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* ========================= */
+
+@media screen and (max-width: 419px) {
+    .menu-content {
+        width: 70%;
+    }
+      
+    .menu-content .search-mobile input {
+        font-size: 12px;
+    }
+     
+    .menu-content .genres a {
+        font-size: 13px;
+
+    }
+}

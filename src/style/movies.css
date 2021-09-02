@@ -1,0 +1,414 @@
+.movies {
+    width: 100%;
+    background: #26262d;
+}
+
+.movies .play-movie {
+    width: 100%;
+    padding: 100px 65px 0;
+    background-image: linear-gradient(to top, rgb(38, 38, 45), rgba(38, 38, 45, 0.4) 83%, rgba(38, 38, 45, 0.2)), url('//canvas-bridge02.tubitv.com/nqBOOjTS1FFNwaHhoOWM1-jyY6k=/1920x1080/smart/img.adrise.tv/1cbfa188-2615-4221-a140-de8bf18de2f7.jpg');
+    background-size: cover;
+}
+
+.movies .play-movie .movie-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 52%;
+
+}
+
+.movies .play-movie .movie-wrap video {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.movies .play-movie .movie-wrap video source {
+    width: 100%;
+    height: 100%;
+}
+
+.info-movie {
+    width: 100%;
+    padding: 45px 65px;
+    color: white;
+}
+
+.info-movie .left {
+    width: 17%;
+}
+
+.info-movie .left img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.info-movie .left .add-to-list {
+    display: block;
+    width: 100%;
+    background: white;
+    margin-top: 10px;
+    padding: 12px 0;
+    text-align: center;
+    color: black;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.info-movie .left .add-to-list:hover {
+    background: #ff501a;
+    color: white;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.info-movie .left .share {
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.info-movie .left .share a {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 12px 20px;
+    border: 1px solid white;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.info-movie .left .share a:first-child {
+    margin-right: 5px;
+    flex-grow: 1;
+}
+
+.info-movie .left .share a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.info-movie .right {
+    width: 83%;
+    padding: 0 30px 20px;
+}
+
+.info-movie .right .name {
+    font-size: 64px;
+    font-weight: 700;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-movie .right .content {
+    padding: 25px 0;
+}
+
+.info-movie .right .content .row {
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.info-movie .right .time-type p,
+.info-movie .right .time-type span {
+    font-size: 12px;
+}
+
+.info-movie .right .time-type p {
+    padding-bottom: 10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.info-movie .right .time-type span {
+    padding: 3px 15px;
+    background: #515157;
+    margin-right: 5px;
+    border-radius: 25px;
+    color: white;
+}
+
+.info-movie .right .sub {
+    margin-top: -15px;
+}
+
+.info-movie .right .sub p {
+    font-size: 12px;
+    margin: auto;
+    margin-right: 10px;
+}
+
+.info-movie .right .sub p:first-child {
+    font-weight: 700;
+    height: 20px;
+    line-height: 16px;
+    display: inline;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 0 8px;
+}
+
+.info-movie .right .sub p:nth-child(2) {
+    background: #515157;
+    height: 25px;
+    line-height: 25px;
+    padding: 0px 10px;
+    border-radius: 3px;
+}
+
+.info-movie .right .content div.dirc p.dirc {
+    font-size: 15px;
+    color: white;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-movie .right .content div.dirc p {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 0.8;
+    display: flex;
+    padding: 15px 0 30px;;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-movie .right .dirc p a {
+    display: block;
+    color: white;
+    margin: auto 0;
+    margin-left: 60px;
+    font-size: 11px;
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 1169px) {
+    .info-movie .left {
+        width: 23%;
+    }
+}
+
+/* =================================== */
+
+@media screen and (max-width: 959px) {
+    .movies .info-movie {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .movies .left {
+        width: 34%;
+    }
+
+    .movies .right {
+        width: 66%;
+    }
+
+    .movies .left .left-content {
+        display: none;
+    }
+
+    .info-movie {
+        padding-bottom: 60px;
+    }
+
+    .info-movie .right {
+        margin-top: auto;
+    }
+
+    .info-movie .right .name {
+        font-size: 38px;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .info-movie .right .content .row {
+        padding-bottom: 0;
+    }
+
+    .movies .right div.dirc {
+        display: none;
+    }
+    
+    .share-small {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 25px;
+    }
+
+    .share-small a {
+        padding: 9px 0;
+        border: 1px solid white;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 600;
+        border-radius: 2px;
+        transition: all 0.3s;
+        margin-left: 10px;
+    }
+
+    .share-small .add-to-list {
+        width: 47%;
+        margin-left: 0;
+        background: white;
+        color: black;
+    }
+    
+    .share-small .add-to-list:hover {
+        background: #ff501a;
+        color: white;
+        border-color: #ff501a;
+    }
+
+    .share-small a:nth-child(2) {
+        width: 47%;
+    }
+
+    .share-small a:nth-child(3) {
+        width: 6%;
+        min-width: 45px;
+    }
+
+    .share-small a:nth-child(2):hover,
+    .share-small a:nth-child(3):hover{
+        opacity: 0.6;
+    }
+
+
+    .dirc-small {
+        display: block;
+        width: 100%;
+        padding-top: 25px;
+    }
+
+    .dirc-small .dirc {
+        font-size: 15px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .dirc-small span {
+        display: block;
+        padding: 15px 0 25px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        font-size: 11px;
+        color: #999999;
+    }
+
+    .dirc-small span a {
+        padding-left: 60px;
+        color: white;
+        font-size: 11px;
+    }
+
+
+
+}
+
+/* ================================== */
+
+@media screen and (max-width: 767px) {
+    .movies .play-movie {
+        padding: 100px 20px 0;
+    }
+
+    .movies .info-movie {
+        padding: 40px 20px;
+    }
+
+    .movies .left .left-content {
+        padding: 0 20px;
+    }
+
+    .movies .left .left-content {
+        top: 46%;
+    }
+
+    .info-movie .right {
+        padding: 0 15px 20px;
+    }
+    .info-movie .right .name{
+        font-size: 23px;
+    }
+
+    .info-movie .right .time-type p {
+        font-size: 10px;
+    }
+
+    .info-movie .right .time-type span {
+        padding: 2px 7px 3px;
+        font-size: 9px;
+    }
+
+    .info-movie .right .sub p:first-child {
+        font-weight: 700;
+        height: 20px;
+        line-height: 16px;
+        display: inline;
+        border: 2px solid white;
+        border-radius: 12px;
+        padding: 0 8px;
+    }
+    .info-movie .right .sub p {
+        font-size: 12px;
+        margin: auto;
+        margin-right: 10px;
+    }
+
+    .info-movie .right .sub p:first-child {
+        font-weight: 600;
+        height: 16px;
+        line-height: 10px;
+        padding: 0 4px;
+    }
+    .info-movie .right .sub p {
+        font-size: 10px;
+    }
+
+    .info-movie .right .sub p:nth-child(2) {
+        height: 20px;
+        line-height: 20px;
+        padding: 0px 6px;
+        min-width: 42px;
+    }
+}
+
+@media screen and (max-width: 419px) {
+    .info-movie .right .name {
+        font-size: 14px;
+    }
+
+    .info-movie .right .content {
+        padding: 15px 0;
+    }
+
+    .share-small {
+        padding-top: 15px;
+    }
+
+    .share-small a {
+        font-size: 11px;
+        padding: 6px 0;
+    }
+
+    .dirc-small {
+        padding-top: 15px;
+    }
+
+    .dirc-small .dirc {
+        font-size: 12px;
+        padding-bottom: 15px;
+    }
+
+    .dirc-small span {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .dirc-small span a {
+        font-size: 9px;
+        padding-left: 20px;
+        white-space: nowrap;
+    }
+}

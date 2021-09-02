@@ -1,0 +1,185 @@
+.sign-in-page {
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(to right, #2b1c51, #2c1536);
+    text-align: center;
+    /* height: 100vh; */
+    color: white;
+}
+
+.sign-in-page .sign-in,
+.sign-in-page .register {
+    width: 320px;
+    min-width: 320px;
+    margin: auto;
+}
+
+.sign-in-page .icon {
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sign-in-page i {
+    font-size: 24px;
+}
+
+.sign-in-page h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: black;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.sign-in-page input {
+    display: block;
+    width: 100%;
+    padding: 18px 20px;
+    margin-bottom: 10px;
+    color: black;
+    border-radius: 5px;
+}
+
+.sign-in-page span {
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 11px;
+    color: red;
+}
+
+.sign-in-page button {
+    width: 100%;
+    padding: 18px 0;
+    border-radius: 3px;
+    margin: 10px 0 15px;
+    font-weight: 600;
+    background: #322d45;
+    color: white;
+    transition: all 0.3s;
+}
+
+.sign-in-page button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.sign-in-page .forgot {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    opacity: 0.8;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.sign-in-page .forgot:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.sign-in-page p {
+    /* text-align: left; */
+    font-size: 12px;
+    color: #999999;
+}
+
+.sign-in-page p a {
+    font-size: 12px;
+    transition: all 0.3s;
+    padding-left: 5px;
+}
+
+.sign-in-page p a:hover {
+    text-decoration: underline;
+}
+
+.sign-in-page .create-success {
+    display: none;
+}
+
+.sign-in-page .overlay {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.sign-in-page .create-success .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 80px 150px;
+    color: black;
+}
+
+.sign-in-page .create-success .content i {
+    color: green;
+    font-size: 62px;
+}
+
+.sign-in-page .create-success .content h2 {
+    font-size: 24px;
+}
+
+.sign-in-page .create-success .content a {
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    background: black;
+    border-radius: 3px;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.sign-in-page .create-success .content a:hover {
+    background: #999999;
+    color: black;
+}
+
+@media screen and (max-width: 767px) {
+    .sign-in-page .sign-in,
+    .sign-in-page .register {
+        /* margin: auto; */
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .sign-in-page {
+        padding-top: 90px;
+    }
+
+    .sign-in-page h1 {
+        font-size: 32px;
+    }
+
+    .sign-in-page .sign-in,
+    .sign-in-page .register {
+        width: 240px;
+        min-width: 240px;
+    }
+
+    .sign-in-page input {
+        padding: 15px 20px;
+    }
+
+    .sign-in-page button {
+        padding: 15px 0;
+    }
+}

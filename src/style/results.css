@@ -1,0 +1,133 @@
+.results {
+    width: 100%;
+
+    background: #26262d;
+    padding: 0 65px;
+    padding-top: 150px;
+}
+
+.results h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ff501a;
+    padding-bottom: 10px;
+}
+
+.results p.search-key {
+    font-size: 64px;
+    line-height: 1;
+    color: white;
+    font-weight: 700;
+    padding-bottom: 70px;
+}
+
+.results span.note {
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.results .results-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.results .item {
+    width: 20%;
+    max-width: 20%;
+    height: auto;
+    padding: 0 5px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.results .item  img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.results .item h3 {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 10px;
+    transition: all 0.2s;
+    padding-bottom: 20px;
+}
+
+.results .item h3:hover {
+    color: #ff501a;
+}
+
+
+
+.results .item .info {
+    justify-content: space-between;
+    height: 40px;
+}
+
+.results .item .info .info-left {
+
+}
+  
+.results .item .info-left p {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+}
+  
+  
+.results .item .info span {
+    min-width: 50px;
+    padding: 3px 10px;
+    font-size: 11px;
+    background: #515157;
+    border-radius: 2px;
+    margin-right: 5px;
+    margin-bottom: auto;
+}
+
+/* ======================================== */
+
+@media screen and (max-width: 1169px) {
+    .results .item {
+        width: 25%;
+        max-width: 25%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .results .item {
+        width: 33.33333%;
+        max-width: 33.33333%;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .results {
+        padding: 0 20px;
+        padding-top: 120px;
+    }
+
+    .results p.search-key {
+        font-size: 42px;
+    }
+
+    .results .item h3 {
+        font-weight: 500;
+    }
+
+    .results .item .info {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 419px) {
+    .results p.search-key {
+        font-size: 32px;
+    }
+}
