@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-tubi-tv/static/css/main.5667b1ed.chunk.css",
-    "main.js": "/react-tubi-tv/static/js/main.fc9bf456.chunk.js",
-    "main.js.map": "/react-tubi-tv/static/js/main.fc9bf456.chunk.js.map",
+    "main.js": "/react-tubi-tv/static/js/main.cf5aff74.chunk.js",
+    "main.js.map": "/react-tubi-tv/static/js/main.cf5aff74.chunk.js.map",
     "runtime-main.js": "/react-tubi-tv/static/js/runtime-main.e8994fbb.js",
     "runtime-main.js.map": "/react-tubi-tv/static/js/runtime-main.e8994fbb.js.map",
     "static/js/2.26ea2047.chunk.js": "/react-tubi-tv/static/js/2.26ea2047.chunk.js",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.e8994fbb.js",
     "static/js/2.26ea2047.chunk.js",
     "static/css/main.5667b1ed.chunk.css",
-    "static/js/main.fc9bf456.chunk.js"
+    "static/js/main.cf5aff74.chunk.js"
   ]
 }
