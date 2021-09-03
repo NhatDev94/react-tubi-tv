@@ -6,6 +6,7 @@
     background-size: cover;
     position: relative;
     overflow: hidden;
+    transition: all 0.5s;
 }
 
 .hero:hover {

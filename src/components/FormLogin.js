@@ -23,9 +23,13 @@ class FormLogin extends React.Component {
     }
 
     render() {
-        window.scrollTo({top:0})
+        window.scrollTo({ top: 0 })
         return (
             <div className="sign-in-page">
+                <div className="success flex">
+                    <i className="fas fa-check-circle"></i>
+                    <h2>Create Success</h2>
+                </div>
                 <div className="sign-page-wrap">
                     <div className="icon">
                         <i className="far fa-user"></i>
@@ -43,7 +47,7 @@ class FormLogin extends React.Component {
                         <Route path="/form-login/register">
                             <Register
                                 account={account}
-                                location={this.props.location}
+                                history={this.props.history}
                                 changeIsRegister={this.props.changeIsRegister}
                                 changeIsStayFormLogin={this.props.changeIsStayFormLogin}
                                 addNewAccount={this.addNewAccount}
@@ -56,7 +60,7 @@ class FormLogin extends React.Component {
         )
     }
     componentWillUnmount() {
-        window.scrollTo({top: 0})
+        window.scrollTo({ top: 0 })
     }
 }
 

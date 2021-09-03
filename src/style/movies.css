@@ -332,6 +332,21 @@
         font-size: 23px;
     }
 
+    .info-movie .right .content {
+        width: 100%;
+    }
+
+    .info-movie .right .time-type {
+        width: 70%;
+        max-width: 70%;
+    }
+
+    .info-movie .right .sub {
+        display: none;
+        width: 30%;
+        min-width: 30%;
+    }
+ 
     .info-movie .right .time-type p {
         font-size: 10px;
     }
@@ -390,6 +405,9 @@
     .share-small a {
         font-size: 11px;
         padding: 6px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .dirc-small {

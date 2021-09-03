@@ -12,7 +12,7 @@ class Register extends React.Component {
         this.isPassword = false
         this.isRepassword = false
     }
-    
+
     submitForm = (target) => {
         target = target.parentElement
         let name = target.querySelector('.name').value
@@ -28,7 +28,7 @@ class Register extends React.Component {
         this.validateEmail(email, target)
         this.validatePassword(password, target)
         this.isPassword && this.validateRepassword(repassword, password, target)
-        this.isEmail && this.isRepassword && this.isName && this.createSuccess(acc, target)     
+        this.isEmail && this.isRepassword && this.isName && this.createSuccess(acc, target)
     }
 
     validateName = (name, target) => {
@@ -58,12 +58,12 @@ class Register extends React.Component {
                 return this.isEmail
             })
             if (this.isEmail) {
-                target.querySelector('span.email').style.display =  'block'
+                target.querySelector('span.email').style.display = 'block'
                 target.querySelector('span.email').innerText = 'Email have exists'
                 this.isEmail = false
                 return
             }
-            target.querySelector('span.email').style.display =  'none'
+            target.querySelector('span.email').style.display = 'none'
             this.isEmail = true
             return
         }
@@ -89,10 +89,10 @@ class Register extends React.Component {
             return
         }
         target.querySelector('span.password').style.display = 'block'
-            target.querySelector('span.password').innerText = "Password must 6 character"
+        target.querySelector('span.password').innerText = "Password must 6 character"
     }
 
-    validateRepassword = (repassword, password ,target) => {
+    validateRepassword = (repassword, password, target) => {
         this.isRepassword = false
         if (repassword === password) {
             this.isRepassword = true
@@ -108,9 +108,17 @@ class Register extends React.Component {
         target.querySelector('span.repassword').innerText = 'Password not match'
     }
 
-    createSuccess = (acc,target) => {
-        target.querySelector('.create-success').style.display = 'block'
+    createSuccess = (acc, target) => {
+        let success = document.querySelector('.sign-in-page .success')
+        success.style.transform = 'translateX(0%)'
+        success.style.opacity = 1
+        this.props.history.push('/form-login/sign')
         this.props.addNewAccount(acc)
+        setTimeout(() => {
+            success.style.transform = 'translateX(100%)'
+            success.style.opacity = 0
+            this.props.changeIsRegister(false)
+        }, 2000)
     }
 
     render() {
@@ -118,31 +126,31 @@ class Register extends React.Component {
         return (
             <div className="register">
                 <h1>Let's get you set up!</h1>
-                <input 
-                    className="name" 
-                    type="text" 
-                    placeholder="Name" 
+                <input
+                    className="name"
+                    type="text"
+                    placeholder="Name"
                     onKeyUp={(e) => e.keyCode === 13 && this.submitForm(e.target)}
                 />
                 <span className="name hide"></span>
-                <input 
-                    className="email" 
-                    type="text" 
-                    placeholder="Email" 
+                <input
+                    className="email"
+                    type="text"
+                    placeholder="Email"
                     onKeyUp={(e) => e.keyCode === 13 && this.submitForm(e.target)}
                 />
                 <span className="email hide"></span>
-                <input 
-                    className="password" 
-                    type="password" 
-                    placeholder="Password" 
+                <input
+                    className="password"
+                    type="password"
+                    placeholder="Password"
                     onKeyUp={(e) => e.keyCode === 13 && this.submitForm(e.target)}
                 />
                 <span className="password hide"></span>
-                <input 
-                    className="repassword" 
-                    type="password" 
-                    placeholder="ReEnter your password" 
+                <input
+                    className="repassword"
+                    type="password"
+                    placeholder="ReEnter your password"
                     onKeyUp={(e) => e.keyCode === 13 && this.submitForm(e.target)}
                 />
                 <span className="repassword hide"></span>
@@ -158,7 +166,7 @@ class Register extends React.Component {
                         >Sign In</Link>
                     </p>
                 </div>
-                <div className="create-success">
+                {/* <div className="create-success">
                     <Link 
                         to='/form-login/sign'
                         className="overlay"
@@ -172,7 +180,7 @@ class Register extends React.Component {
                             onClick={() => props.changeIsRegister(false)}
                         >Sign In</Link>
                     </div>
-                </div>
+                </div> */}
             </div>
         )
     }

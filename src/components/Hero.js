@@ -60,7 +60,7 @@ class Hero extends React.Component {
 
         left.append(hideLeft)
         right.append(hideRight)
-        
+
         let FILM_WIDTH = 65
         let FILM_HEIGHT = 80
         film1.style.marginLeft = -FILM_WIDTH + 'px'
@@ -69,7 +69,7 @@ class Hero extends React.Component {
         film3.style.opacity = 0
         film2.classList.remove('active')
         hideLeft.classList.add('active')
-       
+        
         window.removeImg = setTimeout(() => {
             film1.remove()
             film3.remove()
@@ -90,7 +90,6 @@ class Hero extends React.Component {
     render() {
         let length = hotFilm.length
         let filmIndex = this.state.filmIndex
-        console.log(hotFilm[filmIndex]);
         let bgImage = { backgroundImage: `linear-gradient(rgba(38, 38, 45, 0), rgb(38, 38, 45)), url('${filmBgImg[filmIndex]}')` }
         return (
             <section id="hero" className="hero" style={bgImage}>
