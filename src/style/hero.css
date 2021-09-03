@@ -83,6 +83,7 @@
 
 .slide-left .current-film .row {
     max-width: 140px;
+    /* min-width: 210px; */
     overflow: hidden;
 }
 
@@ -184,7 +185,8 @@
 
 .slide-right .right-content {
     max-width: 140px;
-    overflow: hidden;
+    /* min-width: 210px; */
+    /* overflow: hidden; */
 }
 
 

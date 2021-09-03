@@ -26,60 +26,60 @@ let filmBgImg = [
     film8
 ]
 
+let local = window.localStorage
+
 class Hero extends React.Component {
     constructor() {
         super()
         this.state = {
+            // filmIndex: local.getItem('index') ? JSON.parse(local.getItem('index')) : 0,
             filmIndex: 0,
             mount: true
         }
     }
 
     slideAuto = () => {
-        if (window.location.pathname !== '/react-tubi-tv/') {
+        if(!document.querySelector('.hero')) {
             return
         }
-        let filmIndex = this.state.filmIndex
+        let index = this.state.filmIndex
         let length = hotFilm.length
-
         let film1 = document.querySelectorAll('.hero .film-img')[0]
         let film2 = document.querySelectorAll('.hero .film-img')[1]
         let film3 = document.querySelectorAll('.hero .film-img')[2]
 
+        let left = document.querySelector('.hero .slide-left .row')
+        let right = document.querySelector('.hero .slide-right .right-content')
         let hideLeft = document.createElement('div')
-        hideLeft.classList.add('hide-left', 'film-img')
-        hideLeft.innerHTML = `<img src=${hotFilm[filmIndex >= 7 ? filmIndex - 7 : length - 7 + filmIndex].url}
-                                alt="" />`
-
+        hideLeft.classList.add('film-img', 'hideleft')
         let hideRight = document.createElement('div')
-        hideRight.classList.add('hide-right', 'film-img')
-        hideRight.innerHTML = `<img src=${hotFilm[filmIndex >= 5 ? filmIndex - 5 : length - 5 + filmIndex].url}
-                        alt="" />`
+        hideRight.classList.add('film-img', 'hideRight')
+        hideLeft.innerHTML = film3.innerHTML
+        hideRight.innerHTML = `<img src=${length - index <= 4 ? hotFilm[index - 4].url :hotFilm[length -4 + index].url}
+                                    alt="" />`
 
-        let row = document.querySelector('.hero .current-film .row')
-        let slideRight = document.querySelector('.hero .slide-right .right-content')
-
-        row.appendChild(hideLeft)
-        slideRight.appendChild(hideRight)
-
-        film1.style.marginLeft = -65 + 'px'
-        film3.style.marginBottom = -80 + 'px'
-        film3.style.marginLeft = -65 + "px"
-
-
-        hideLeft.classList.add('active')
+        left.append(hideLeft)
+        right.append(hideRight)
+        
+        let FILM_WIDTH = 65
+        let FILM_HEIGHT = 80
+        film1.style.marginLeft = -FILM_WIDTH + 'px'
+        film3.style.marginLeft = -FILM_WIDTH + 'px'
+        film3.style.marginBottom = -FILM_HEIGHT + 'px'
+        film3.style.opacity = 0
         film2.classList.remove('active')
-
-        setTimeout(() => {
+        hideLeft.classList.add('active')
+       
+        window.removeImg = setTimeout(() => {
             film1.remove()
             film3.remove()
-            if (filmIndex >= hotFilm.length - 1) {
-                filmIndex = 0
-                this.setState({ filmIndex: filmIndex }, () => null)
+            let newIndex = index + 1
+            if (newIndex >= length - 1) {
+                newIndex = 0
+                this.setState({filmIndex: newIndex}, () => null)
                 return
             }
-            filmIndex += 1
-            this.setState({ filmIndex: filmIndex }, () => null)
+            this.setState({filmIndex: newIndex}, () => null)
         }, 1000)
     }
 
@@ -90,6 +90,7 @@ class Hero extends React.Component {
     render() {
         let length = hotFilm.length
         let filmIndex = this.state.filmIndex
+        console.log(hotFilm[filmIndex]);
         let bgImage = { backgroundImage: `linear-gradient(rgba(38, 38, 45, 0), rgb(38, 38, 45)), url('${filmBgImg[filmIndex]}')` }
         return (
             <section id="hero" className="hero" style={bgImage}>
@@ -97,7 +98,7 @@ class Hero extends React.Component {
                     <div className="hero-content" onClick={(e) => this.heroContentHandleClick(e.target)}>
                         <div className="name-film flex">
                             <div className="play flex"><i className="fas fa-play"></i></div>
-                            <Link to={`movies/${hotFilm[filmIndex].id}`} >
+                            <Link to={`/movies/${hotFilm[filmIndex].id}`} >
                                 <h1>{hotFilm[filmIndex].name}</h1>
                             </Link>
                         </div>
@@ -105,6 +106,8 @@ class Hero extends React.Component {
                             <div className="slide-left flex">
                                 <div className="current-film flex">
                                     <div className="row flex">
+                                        {/* <div className="img1 test">1</div>
+                                        <div className="img2 test">2</div> */}
                                         <HeroFilm film={hotFilm[length - 1]} />
                                         <HeroFilm film={hotFilm[0]} active={'active'} />
                                     </div>
@@ -123,12 +126,14 @@ class Hero extends React.Component {
                             >
                                 <div className="link-wrap">
                                     <Link
-                                    to={`/movies/${hotFilm[filmIndex].id}`}
+                                        to={`/movies/${hotFilm[filmIndex].id}`}
                                     >Watch Now <span>FREE</span></Link>
                                 </div>
                             </div>
                             <div className="slide-right flex">
                                 <div className="right-content flex">
+                                    {/* <div className="img3 test" >3</div>
+                                    <div className="img4 test" >4</div> */}
                                     <HeroFilm film={hotFilm[1]} />
                                     <HeroFilm film={hotFilm[2]} />
                                 </div>
@@ -140,13 +145,17 @@ class Hero extends React.Component {
             </section>
         )
     }
+
     componentDidMount() {
-        let id = setInterval(() => {
+        window.slideAuto = setInterval(() => {
             this.slideAuto()
-            window.location.pathname !== '/react-tubi-tv/' && clearInterval(id)
         }, 3000)
     }
 
+    componentWillUnmount() {
+        clearInterval(window.slideAuto)
+        clearTimeout(window.removeImg)
+    }
 }
 
 export default withRouter(Hero)
