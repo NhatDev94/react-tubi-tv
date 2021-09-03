@@ -12,9 +12,12 @@ class Home extends React.Component {
             </div >
         )
     }
-    // componentDidMount() {
-    //     this.isMount === true && this.props.changeIsStayFormLogin(false)
-    // }
+    componentDidMount() {
+        console.log('did mount');
+        if (this.props.isStayFormLogin) {
+            this.props.changeIsStayFormLogin(false)
+        }
+    }
     componentWillUnmount() {
         window.scrollTo({top: 0})
     }
