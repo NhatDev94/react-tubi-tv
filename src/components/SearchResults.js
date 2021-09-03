@@ -6,7 +6,7 @@ import '../style/results.css'
 
 class SearchResults extends React.Component {
     render() {
-        let searchValue = this.props.searchValue
+        let searchValue = this.props.searchValue.toLowerCase()
         searchValue && searchValue.toLowerCase()
         return (
             <div className="results">
